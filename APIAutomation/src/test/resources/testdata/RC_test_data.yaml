@@ -1,0 +1,28 @@
+allTestCaseDataMap:
+
+  RC_GetToken:
+  - !!com.Agility.RateCloud_requestPOJO.YamlTestDataForRCTokenAPI {username: Agility, password: "@gility@ic0nt@iners" , testCategory: smoke}
+  - !!com.Agility.RateCloud_requestPOJO.YamlTestDataForRCTokenAPI {username: Agility, password: "@gility@ic0nt@iners" , testCategory: sanity}
+  - !!com.Agility.RateCloud_requestPOJO.YamlTestDataForRCTokenAPI {username: Agility, password: "@gility@ic0nt@iners" , testCategory: sanity}
+  - !!com.Agility.RateCloud_requestPOJO.YamlTestDataForRCTokenAPI {username: Agility, password: "@gility@ic0nt@iners" , testCategory: sanity}
+
+  LCL_RateSearch:
+  - !!com.Agility.RateCloud_requestPOJO.YamlTestDataForLCLAPI {origin: {zipcode: '', type: d, state: '', portIsoCode: SGSIN, place: '', countryIsocode: ''}, destination: {zipcode: '', type: d, state: '', portIsoCode: BEANR, place: '', countryIsocode: ''}, testCategory: smoke}
+  - !!com.Agility.RateCloud_requestPOJO.YamlTestDataForLCLAPI {origin: {zipcode: '30576', type: d, state: '', portIsoCode: deham, place: '', countryIsocode: ''}, destination: {zipcode: '', type: d, state: '', portIsoCode: cnshg, place: '', countryIsocode: ''}, testCategory: Regression}
+  - !!com.Agility.RateCloud_requestPOJO.YamlTestDataForLCLAPI {origin: {zipcode: '', type: d, state: '', portIsoCode: CNSHG, place: '1032250', countryIsocode: ''}, destination: {zipcode: '', type: d, state: '', portIsoCode: USNYC, place: '725010', countryIsocode: ''}, testCategory: Regression}
+  - !!com.Agility.RateCloud_requestPOJO.YamlTestDataForLCLAPI {origin: {zipcode: '', type: d, state: '', portIsoCode: CNSHG, place: '1032250', countryIsocode: ''}, destination: {zipcode: '', type: d, state: '', portIsoCode: USNYC, place: '725010', countryIsocode: ''}, testCategory: Regression}
+  - !!com.Agility.RateCloud_requestPOJO.YamlTestDataForLCLAPI {origin: {zipcode: '', type: d, state: '', portIsoCode: CNSHG, place: '1032250', countryIsocode: ''}, destination: {zipcode: '', type: d, state: '', portIsoCode: USNYC, place: '725010', countryIsocode: ''}, testCategory: Regression}
+    
+  FCL_RateSearch:
+  - !!com.Agility.RateCloud_requestPOJO.YamlTestDataForFCLAPI {origin: {zipcode: '', type: d, state: '', portIsoCode: deham, place: '', countryIsocode: ''}, destination: {zipcode: '', type: d, state: '', portIsoCode: cnshg, place: '725010', countryIsocode: ''}, containers: [{isocode: 22G0, quantity: '1'}, {isocode: 42G0, quantity: '1'}, {isocode: 45G0, quantity: '1'}], testCategory: smoke}
+  - !!com.Agility.RateCloud_requestPOJO.YamlTestDataForFCLAPI {origin: {zipcode: '', type: d, state: '', portIsoCode: CNSHG, place: '1032250', countryIsocode: ''}, destination: {zipcode: '', type: d, state: '', portIsoCode: usnyc, place: '725010', countryIsocode: ''}, containers: [{isocode: 22G0, quantity: '1'}, {isocode: 42G0, quantity: '1'}, {isocode: 45G0, quantity: '1'}], testCategory: Regression}
+  
+  SC_Authenticate:
+  - !!com.Agility.ComplianceSC_RequestPOJO.AuthenticateData {email: "coordinator@agility.com", password: "Pass@123" , testCategory: smoke}
+  
+  SC_CoordinatorAuthentication:
+  - !!com.Agility.ComplianceSC_RequestPOJO.AuthenticateData {email: "coordinator@agility.com", password: "Pass@123" , testCategory: smoke}
+  
+  SC_CreateSC_Request:
+  - !!com.Agility.ComplianceSC_RequestPOJO.CreateSCRequest {requestId: 0, consignmentId: ASD0099, countryId: 4, sancCountryId: 1, sancBranchId: 1, sancCountryType: new, modeOfTransportId: 2, archive: 0, requestedDate: '2020-09-30T13:41:30.711Z', requestedBy: sdarji, statusId: 1, comments: status id is 2 , testCategory: smoke}
+  

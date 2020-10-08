@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-10-06T17:58:07 IST" name="Default suite" finished-at="2020-10-06T17:58:12 IST" duration-ms="4496">
+    <groups>
+    </groups>
+    <test started-at="2020-10-06T17:58:07 IST" name="Default test" finished-at="2020-10-06T17:58:12 IST" duration-ms="4496">
+      <class name="com.Agility.ComplianceSC_Tests.SanctionedCountryTestCases">
+        <test-method signature="SC_CoordinatorAuthentication(com.Agility.ComplianceSC_RequestPOJO.AuthenticateData)[pri:1, instance:com.Agility.ComplianceSC_Tests.SanctionedCountryTestCases@6e9a5ed8]" started-at="2020-10-06T17:58:07 IST" name="SC_CoordinatorAuthentication" data-provider="RC_test_data_provider" finished-at="2020-10-06T17:58:10 IST" duration-ms="2846" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.Agility.ComplianceSC_RequestPOJO.AuthenticateData@50d13246]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SC_CoordinatorAuthentication -->
+        <test-method signature="SC_CreateSC_Request(com.Agility.ComplianceSC_RequestPOJO.CreateSCRequest)[pri:2, instance:com.Agility.ComplianceSC_Tests.SanctionedCountryTestCases@6e9a5ed8]" started-at="2020-10-06T17:58:10 IST" name="SC_CreateSC_Request" data-provider="RC_test_data_provider" finished-at="2020-10-06T17:58:11 IST" duration-ms="142" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.Agility.ComplianceSC_RequestPOJO.CreateSCRequest@2f4ba1ae[requestId=0,consignmentId=ASD0099,countryId=4,sancCountryId=1,sancBranchId=1,sancCountryType=new,modeOfTransportId=2,archive=0,requestedDate=2020-09-30T13:41:30.711Z,requestedBy=sdarji,statusId=1,comments=status id is 2]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SC_CreateSC_Request -->
+        <test-method signature="SaveSectionA()[pri:3, instance:com.Agility.ComplianceSC_Tests.SanctionedCountryTestCases@6e9a5ed8]" started-at="2020-10-06T17:58:11 IST" name="SaveSectionA" finished-at="2020-10-06T17:58:11 IST" duration-ms="607" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SaveSectionA -->
+        <test-method signature="CompleteSectionA()[pri:4, instance:com.Agility.ComplianceSC_Tests.SanctionedCountryTestCases@6e9a5ed8]" started-at="2020-10-06T17:58:11 IST" name="CompleteSectionA" finished-at="2020-10-06T17:58:12 IST" duration-ms="391" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CompleteSectionA -->
+        <test-method signature="SendToScreener()[pri:5, instance:com.Agility.ComplianceSC_Tests.SanctionedCountryTestCases@6e9a5ed8]" started-at="2020-10-06T17:58:12 IST" name="SendToScreener" finished-at="2020-10-06T17:58:12 IST" duration-ms="210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SendToScreener -->
+      </class> <!-- com.Agility.ComplianceSC_Tests.SanctionedCountryTestCases -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

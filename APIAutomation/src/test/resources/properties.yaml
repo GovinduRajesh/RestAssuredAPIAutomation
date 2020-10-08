@@ -1,0 +1,27 @@
+--- 
+apis: 
+  cases_to_be_run: smoke
+  
+  rcBaseURL: https://focisdemoapi.agility.com
+  
+  rcTokenAPI: /security/authenticate
+  
+  lclRateSearch: /rate-cloud-api/rates/lcl
+  
+  fclRateSearch: /rate-cloud-api/rates/fcl
+  
+  gtmhome: "http://apisit.connectsplus.agility.com"
+  
+  loginAPI: /Account/GetToken
+  
+  HSCodeAPI: /Shipa/hsSearchByKeyword
+  
+  scBaseURL: http://10.138.108.140:2309
+  
+  scAuthenticate: /api/Account/authenticate
+  
+  scCreateRequest: /api/v1/sanctioned-country-request
+  
+  scRequestDetailsByID: /api/v1/sanctioned-country-request/
+  
+  scSecA: /api/v1/sanctioned-country-request/questionnaire-sec-a

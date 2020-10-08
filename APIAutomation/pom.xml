@@ -1,0 +1,131 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.Agility</groupId>
+  <artifactId>APIAutomation</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>APIAutomation</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    	<testng.version>6.14.3</testng.version>
+		<restassured.version>4.0.0</restassured.version>
+		<jackson.version>2.9.9</jackson.version>
+		<commonlang.version>3.9</commonlang.version>
+		<log4j.version>1.2.17</log4j.version>
+  </properties>
+
+  <dependencies>
+    <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>4.0.0</version>
+			
+		</dependency>
+
+
+		<!-- used to parse Json Document -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>json-path</artifactId>
+			<version>${restassured.version}</version>
+		</dependency>
+
+
+		<!-- to validate that a JSON response conforms to a Json Schema -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>json-schema-validator</artifactId>
+			<version>${restassured.version}</version>
+				<exclusions>
+        			<exclusion>
+           			 	<groupId>javax.mail</groupId>
+           			 	<artifactId>mailapi</artifactId>
+        			</exclusion>
+   		 		</exclusions>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.5</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${testng.version}</version>
+			
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-yaml</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${commonlang.version}</version>
+		</dependency>
+
+
+	<!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
+	<dependency>
+		<groupId>commons-lang</groupId>
+		<artifactId>commons-lang</artifactId>
+		<version>2.6</version>
+	</dependency>
+
+		
+
+		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>4.0.9</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20190722</version>
+		</dependency>
+		
+		
+		<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+		<dependency>
+    		<groupId>javax.mail</groupId>
+    		<artifactId>mail</artifactId>
+    		<version>1.4.7</version>
+		</dependency>
+		
+		<dependency>
+    		<groupId>com.sun.mail</groupId>
+    		<artifactId>smtp</artifactId>
+   		 	<version>1.5.4</version>
+		</dependency>
+		
+    
+  </dependencies>
+</project>
