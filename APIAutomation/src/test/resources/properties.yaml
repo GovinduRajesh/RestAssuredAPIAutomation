@@ -25,3 +25,5 @@ apis:
   scRequestDetailsByID: /api/v1/sanctioned-country-request/
   
   scSecA: /api/v1/sanctioned-country-request/questionnaire-sec-a
+  
+  scSecB: /api/v1/sanctioned-country-request/questionnaire-sec-b

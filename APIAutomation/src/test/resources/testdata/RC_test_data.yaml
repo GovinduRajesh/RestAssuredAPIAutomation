@@ -23,6 +23,9 @@ allTestCaseDataMap:
   SC_CoordinatorAuthentication:
   - !!com.Agility.ComplianceSC_RequestPOJO.AuthenticateData {email: "coordinator@agility.com", password: "Pass@123" , testCategory: smoke}
   
+  SC_ScreenerAuthentication:
+  - !!com.Agility.ComplianceSC_RequestPOJO.AuthenticateData {email: "screener@agility.com", password: "Pass@123" , testCategory: smoke}
+  
   SC_CreateSC_Request:
-  - !!com.Agility.ComplianceSC_RequestPOJO.CreateSCRequest {requestId: 0, consignmentId: ASD0099, countryId: 4, sancCountryId: 1, sancBranchId: 1, sancCountryType: new, modeOfTransportId: 2, archive: 0, requestedDate: '2020-09-30T13:41:30.711Z', requestedBy: sdarji, statusId: 1, comments: status id is 2 , testCategory: smoke}
+  - !!com.Agility.ComplianceSC_RequestPOJO.CreateSCRequest {requestId: 0, consignmentId: ASD0999, countryId: 4, sancCountryId: 7, sancBranchId: 1, sancCountryType: new, modeOfTransportId: 2, archive: 0, requestedDate: '2020-09-30T13:41:30.711Z', requestedBy: Rajesh Govindu, statusId: 1, comments: status id is 2 , testCategory: smoke}
   

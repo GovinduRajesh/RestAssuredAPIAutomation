@@ -4,6 +4,8 @@ import static io.restassured.RestAssured.given;
 
 import com.Agility.ComplianceSC_RequestPOJO.AuthenticateData;
 import com.Agility.ComplianceSC_RequestPOJO.CreateSCRequest;
+import com.Agility.ComplianceSC_RequestPOJO.PutRequestPOJO;
+import com.Agility.ComplianceSC_RequestPOJO.SectionBPOJO;
 import com.Agility.ComplianceSC_ResponsePOJO_Ext.GetRequestByIDResponse;
 import com.Agility.dataProvider.PropertyFileReader;
 
@@ -72,7 +74,7 @@ public class SC_API_Logics {
 		
 	String URI = BaseURL+ PropertyFileReader.getPropertyData().getApis().get("scSecA");
 		
-	String body = "{\"requestId\":"+Requestid+",\"consignmentId\":\""+consignmentId+"\",\"countryId\":4,\"sancCountryId\":1,\"sancBranchId\":1,\"sancCountryType\":\"new\",\"modeOfTransportId\":"+MOT+",\"archive\":0,\"requestedDate\":\"2020-09-30T13:41:30.711\",\"requestedBy\":\"rgovindu\",\"statusId\":1,\"comments\":\"status id is 2\",\"SanCountryReqQuestionnaireSecA\":{\"sancCountryQustId\":0,\"requestId\":"+Requestid+",\"isShipper\":0,\"modeOfTransportId\":1,\"shipmentOrigin\":\"AU\",\"shipmentOriginCountryId\":4,\"shipmentDestination\":\"IN\",\"shipmentDestCountryId\":7,\"isTranshipment\":0,\"transhipmentCountryId\":4,\"carrierId\":1,\"vessel\":\"Vessel\",\"productsToBeShipped\":\"Garments\",\"endUserProducts\":\"Garments\",\"hsCommodityCodes\":\"hsc\",\"ecn\":\"ecn\",\"countryOfOriginId\":4,\"currencyOfPaymentId\":\"AUD\",\"othCurrenciesInvInTrans\":\"INR\",\"statusId\":5,\"modeOfTransportMode\":\"Air\",\"shipmentOriginCountryCode\":\"AU\",\"shipmentOriginCountryName\":\"Australia\",\"shipmentDestCountryCode\":\"IN\",\"shipmentDestCountryName\":\"India\",\"transhipmentCountryCode\":\"AU\",\"transhipmentCountryName\":\"Australia\",\"carrierCode\":\"MAEU\",\"carrierName\":\"Mearsk\",\"countryOfOriginCode\":\"AU\",\"countryOfOriginName\":\"Australia\",\"statusStatusDesc\":\"Questionnaire Sec A Saved\"},\"questSecB\":null,\"questionnaireBanks\":[{\"questionnaireBankId\":0,\"requestId\":"+Requestid+",\"name\":\"ICICI - AU\",\"city\":\"Melbourne\",\"countryId\":4,\"countryname\":\"AU\"}],\"stkDetails\":[{\"reqStkDetailsId\":0,\"stakeholderTypeId\":1,\"stakeholderName\":\"Ransome\",\"street\":\"Street1\",\"city\":\"Melbourne\",\"state\":\"Melbourne\",\"country\":\"Australia\",\"postalCode\":\"500067\",\"requestId\":"+Requestid+",\"stakeholderId\":1}]}";
+	String body = "{\"requestId\":"+Requestid+",\"consignmentId\":\""+consignmentId+"\",\"countryId\":4,\"sancCountryId\":7,\"sancBranchId\":1,\"sancCountryType\":\"new\",\"modeOfTransportId\":"+MOT+",\"archive\":0,\"requestedDate\":\"2020-09-30T13:41:30.711\",\"requestedBy\":\"rgovindu\",\"statusId\":1,\"comments\":\"status id is 2\",\"SanCountryReqQuestionnaireSecA\":{\"sancCountryQustId\":0,\"requestId\":"+Requestid+",\"isShipper\":0,\"modeOfTransportId\":1,\"shipmentOrigin\":\"AU\",\"shipmentOriginCountryId\":4,\"shipmentDestination\":\"IN\",\"shipmentDestCountryId\":7,\"isTranshipment\":0,\"transhipmentCountryId\":4,\"carrierId\":1,\"vessel\":\"Vessel\",\"productsToBeShipped\":\"Garments\",\"endUserProducts\":\"Garments\",\"hsCommodityCodes\":\"hsc\",\"ecn\":\"ecn\",\"countryOfOriginId\":4,\"currencyOfPaymentId\":\"AUD\",\"othCurrenciesInvInTrans\":\"INR\",\"statusId\":5,\"modeOfTransportMode\":\"Air\",\"shipmentOriginCountryCode\":\"AU\",\"shipmentOriginCountryName\":\"Australia\",\"shipmentDestCountryCode\":\"IN\",\"shipmentDestCountryName\":\"India\",\"transhipmentCountryCode\":\"AU\",\"transhipmentCountryName\":\"Australia\",\"carrierCode\":\"MAEU\",\"carrierName\":\"Mearsk\",\"countryOfOriginCode\":\"AU\",\"countryOfOriginName\":\"Australia\",\"statusStatusDesc\":\"Questionnaire Sec A Saved\"},\"questSecB\":null,\"questionnaireBanks\":[{\"questionnaireBankId\":0,\"requestId\":"+Requestid+",\"name\":\"ICICI - AU\",\"city\":\"Melbourne\",\"countryId\":4,\"countryname\":\"AU\"}],\"stkDetails\":[{\"reqStkDetailsId\":0,\"stakeholderTypeId\":1,\"stakeholderName\":\"Ransome\",\"street\":\"Street1\",\"city\":\"Melbourne\",\"state\":\"Melbourne\",\"country\":\"Australia\",\"postalCode\":\"500067\",\"requestId\":"+Requestid+",\"stakeholderId\":1}]}";
 	
 	System.out.println(body);
 	
@@ -90,6 +92,40 @@ public class SC_API_Logics {
 	
 	public Response CompleteSecA(String body, String token) {
 		String URI = BaseURL+ PropertyFileReader.getPropertyData().getApis().get("scSecA");
+		
+		System.out.println(body);
+		
+		Response response = 
+				given()
+						.body(body)
+						.contentType("application/json")
+						.header("Authorization", "Bearer "+token)
+				.when()
+						.post(URI);
+			
+			return response;
+		
+	}
+	
+	public Response SendToScreener(PutRequestPOJO body, String token, int RequestId) {
+		String URI = BaseURL+ PropertyFileReader.getPropertyData().getApis().get("scRequestDetailsByID");
+		
+		System.out.println(body);
+		
+		Response response = 
+				given()
+						.body(body)
+						.contentType("application/json")
+						.header("Authorization", "Bearer "+token)
+				.when()
+						.put(URI+RequestId);
+			
+			return response;
+		
+	}
+	
+	public Response SecB(SectionBPOJO body, String token) {
+		String URI = BaseURL+ PropertyFileReader.getPropertyData().getApis().get("scSecB");
 		
 		System.out.println(body);
 		
