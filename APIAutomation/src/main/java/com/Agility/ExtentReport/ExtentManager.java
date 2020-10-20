@@ -25,7 +25,8 @@ public class ExtentManager {
 	        extent.attachReporter(htmlReporter);
 	        extent.setSystemInfo("Automation Tester", "RAJESH GOVINDU");
 	        extent.setSystemInfo("Organization", "Agility E Services");
-	        extent.setSystemInfo("Project-Module", "RC-API Testing");
+	        extent.setSystemInfo("Project-Module", "Sanction Country-API Testing");
+	        extent.setSystemInfo("URL", "http://10.138.108.140:2309/");
 	        
 	        
 	        return extent;

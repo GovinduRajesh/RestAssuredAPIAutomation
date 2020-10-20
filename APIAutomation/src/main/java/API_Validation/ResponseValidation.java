@@ -109,14 +109,27 @@ public class ResponseValidation extends ExtentListeners {
 		}
 	}
 
-	public static void logString(Response response, String path) {
+	public static void logString(Response response, String path,String Message) {
 		try {
 
-			test.log(Status.INFO, path + " Count is :: " + response.jsonPath().get(path));
+			test.log(Status.INFO, Message +  response.jsonPath().get(path));
 		} catch (Exception e) {
 			test.log(Status.FAIL, e.fillInStackTrace());
 		}
 	}
+	
+	public static void logMessage(String Message) {
+		try {
+
+			test.log(Status.INFO, Message);
+		} catch (Exception e) {
+			test.log(Status.FAIL, e.fillInStackTrace());
+		}
+	}
+	
+	
+	
+	
 
 	public static void logStringInfo(String value) {
 		try {

@@ -112,7 +112,7 @@ public class ExtentListeners implements ITestListener {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		MonitoringMail mail = new MonitoringMail();
+		/*MonitoringMail mail = new MonitoringMail();
 		try {
 			//String Filename = System.getProperty("user.dir") + "\\reports\\"+fileName;
 		//	System.out.println(System.getProperty("user.dir") + "\\reports\\"+fileName);
@@ -125,7 +125,7 @@ public class ExtentListeners implements ITestListener {
 		} catch (MessagingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 
 	}
 

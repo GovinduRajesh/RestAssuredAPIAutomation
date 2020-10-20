@@ -3,11 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Agility.ComplianceSC_Tests.SanctionedCountryTests">
+      <class name="com.Agility.ComplianceSC_Tests.SanctionedCountryTestCases">
         <methods>
-          <include name="CompleteSecA"/>
+          <include name="CompleteSecB"/>
+          <include name="SC_CoordinatorAuthentication" invocation-numbers="0"/>
+          <include name="SC_ScreenerAuthentication" invocation-numbers="0"/>
+          <include name="SC_CreateSC_Request" invocation-numbers="0"/>
+          <include name="ApproveRequest"/>
+          <include name="SendToScreener"/>
+          <include name="CompleteSectionA"/>
+          <include name="SaveSecB"/>
+          <include name="SaveSectionA"/>
         </methods>
-      </class> <!-- com.Agility.ComplianceSC_Tests.SanctionedCountryTests -->
+      </class> <!-- com.Agility.ComplianceSC_Tests.SanctionedCountryTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

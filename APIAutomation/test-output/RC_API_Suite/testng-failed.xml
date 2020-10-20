@@ -6,13 +6,11 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.Agility.RCTests.RCAPITests">
+      <class name="com.Agility.ComplianceSC_Tests.SanctionedCountryTestCases">
         <methods>
-          <include name="LCL_RateSearch" invocation-numbers="0"/>
-          <include name="RC_GetToken" invocation-numbers="0"/>
-          <include name="FCL_RateSearch" invocation-numbers="0"/>
+          <include name="SC_CoordinatorAuthentication" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.Agility.RCTests.RCAPITests -->
+      </class> <!-- com.Agility.ComplianceSC_Tests.SanctionedCountryTestCases -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [RC_API_Suite] -->

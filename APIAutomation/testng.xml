@@ -10,7 +10,8 @@
 
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.Agility.RCTests.RCAPITests"/>
+      <!-- <class name="com.Agility.RCTests.RCAPITests"/> -->
+      <class name="com.Agility.ComplianceSC_Tests.SanctionedCountryTestCases"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- RC_API_Suite -->
