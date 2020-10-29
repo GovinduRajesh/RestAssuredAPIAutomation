@@ -24,7 +24,7 @@ public class ResponseValidation extends ExtentListeners {
 		} catch (AssertionError e) {
 			test.log(Status.FAIL, e.fillInStackTrace());
 			test.log(Status.FAIL,
-					"Expected status code is :: " + statusCode + " , insted of getting :: " + response.getStatusCode());
+					"Expected status code is :: " + statusCode + " , Actual Status Code is :: " + response.getStatusCode());
 		} catch (Exception e) {
 			test.log(Status.FAIL, e.fillInStackTrace());
 		}
@@ -64,9 +64,14 @@ public class ResponseValidation extends ExtentListeners {
 			test.log(Status.FAIL, e.fillInStackTrace());
 		}
 	}
+	
+	public static void logAsFail(String message) {
+		test.log(Status.FAIL,message );
+	}
 
 	public static void logResponse(Response response) {
 		try {
+			
 			test.log(Status.INFO, "<b>Api response is :</b>\n" + response.prettyPrint());
 		} catch (Exception e) {
 			test.log(Status.FAIL, e.fillInStackTrace());
@@ -94,6 +99,7 @@ public class ResponseValidation extends ExtentListeners {
 	public static void logJsonPath(Response response, String jsonpath) {
 		try {
 			JsonPath Jsonpath = response.jsonPath();
+			
 			test.log(Status.INFO, "<b>" + jsonpath + "</b> value in response is :: " + Jsonpath.getList(jsonpath));
 		} catch (Exception e) {
 			test.log(Status.FAIL, e.fillInStackTrace());

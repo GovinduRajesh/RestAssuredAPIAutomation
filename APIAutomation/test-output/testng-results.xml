@@ -1,70 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-10-13T19:12:36 IST" name="RC_API_Suite" finished-at="2020-10-13T19:12:43 IST" duration-ms="6988">
+  <suite started-at="2020-10-29T20:01:08 IST" name="RC_API_Suite" finished-at="2020-10-29T20:01:22 IST" duration-ms="14202">
     <groups>
     </groups>
-    <test started-at="2020-10-13T19:12:36 IST" name="Test" finished-at="2020-10-13T19:12:43 IST" duration-ms="6988">
-      <class name="com.Agility.ComplianceSC_Tests.SanctionedCountryTestCases">
-        <test-method signature="SC_CoordinatorAuthentication(com.Agility.ComplianceSC_RequestPOJO.AuthenticateData)[pri:1, instance:com.Agility.ComplianceSC_Tests.SanctionedCountryTestCases@7c51f34b]" started-at="2020-10-13T19:12:36 IST" name="SC_CoordinatorAuthentication" data-provider="RC_test_data_provider" finished-at="2020-10-13T19:12:41 IST" duration-ms="5085" status="PASS">
+    <test started-at="2020-10-29T20:01:08 IST" name="Test" finished-at="2020-10-29T20:01:22 IST" duration-ms="14202">
+      <class name="com.Agility.RCTests.RCAPITests2">
+        <test-method signature="RC_GetToken(com.Agility.RateCloud_requestPOJO.YamlTestDataForRCTokenAPI)[pri:1, instance:com.Agility.RCTests.RCAPITests2@38e79ae3]" started-at="2020-10-29T20:01:09 IST" name="RC_GetToken" data-provider="RC_test_data_provider" finished-at="2020-10-29T20:01:14 IST" duration-ms="4707" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[com.Agility.ComplianceSC_RequestPOJO.AuthenticateData@23bff419]]>
+                <![CDATA[com.Agility.RateCloud_requestPOJO.YamlTestDataForRCTokenAPI@60975100]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SC_CoordinatorAuthentication -->
-        <test-method signature="SC_CreateSC_Request(com.Agility.ComplianceSC_RequestPOJO.CreateSCRequest)[pri:2, instance:com.Agility.ComplianceSC_Tests.SanctionedCountryTestCases@7c51f34b]" started-at="2020-10-13T19:12:41 IST" name="SC_CreateSC_Request" data-provider="RC_test_data_provider" finished-at="2020-10-13T19:12:42 IST" duration-ms="149" status="PASS">
+        </test-method> <!-- RC_GetToken -->
+        <test-method signature="FCL_RateSearch(com.Agility.RateCloud_requestPOJO.YamlTestDataForFCLAPI)[pri:2, instance:com.Agility.RCTests.RCAPITests2@38e79ae3]" started-at="2020-10-29T20:01:14 IST" name="FCL_RateSearch" data-provider="RC_test_data_provider" finished-at="2020-10-29T20:01:18 IST" duration-ms="4335" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[com.Agility.ComplianceSC_RequestPOJO.CreateSCRequest@58324c9f[requestId=0,consignmentId=CNSID0009,countryId=4,sancCountryId=7,sancBranchId=1,sancCountryType=new,modeOfTransportId=2,archive=0,requestedDate=2020-10-13T10:07:46.950Z,requestedBy=Rajesh Govindu,statusId=1,comments=status id is 2]]]>
+                <![CDATA[com.Agility.RateCloud_requestPOJO.YamlTestDataForFCLAPI@6c8f60f3]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[you wandered onto the wrong path]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: you wandered onto the wrong path
+at org.testng.Assert.fail(Assert.java:99)
+at com.Agility.RCTests.RCAPITests2.FCL_RateSearch(RCAPITests2.java:150)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FCL_RateSearch -->
+        <test-method signature="LCL_RateSearch(com.Agility.RateCloud_requestPOJO.YamlTestDataForLCLAPI)[pri:3, instance:com.Agility.RCTests.RCAPITests2@38e79ae3]" started-at="2020-10-29T20:01:18 IST" name="LCL_RateSearch" data-provider="RC_test_data_provider" finished-at="2020-10-29T20:01:22 IST" duration-ms="3849" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[YamlTestDataForLCLAPI [origin=Origin [zipcode=, type=d, state=, portIsoCode=INMAA, place=731529, countryIsocode=], destination=Destination [zipcode=, type=d, state=, portIsoCode=USLAX, place=209547, countryIsocode=]]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SC_CreateSC_Request -->
-        <test-method signature="SaveSectionA()[pri:3, instance:com.Agility.ComplianceSC_Tests.SanctionedCountryTestCases@7c51f34b]" started-at="2020-10-13T19:12:42 IST" name="SaveSectionA" finished-at="2020-10-13T19:12:42 IST" duration-ms="276" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SaveSectionA -->
-        <test-method signature="CompleteSectionA()[pri:4, instance:com.Agility.ComplianceSC_Tests.SanctionedCountryTestCases@7c51f34b]" started-at="2020-10-13T19:12:42 IST" name="CompleteSectionA" finished-at="2020-10-13T19:12:42 IST" duration-ms="148" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CompleteSectionA -->
-        <test-method signature="SendToScreener()[pri:5, instance:com.Agility.ComplianceSC_Tests.SanctionedCountryTestCases@7c51f34b]" started-at="2020-10-13T19:12:42 IST" name="SendToScreener" finished-at="2020-10-13T19:12:42 IST" duration-ms="123" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SendToScreener -->
-        <test-method signature="SC_ScreenerAuthentication(com.Agility.ComplianceSC_RequestPOJO.AuthenticateData)[pri:6, instance:com.Agility.ComplianceSC_Tests.SanctionedCountryTestCases@7c51f34b]" started-at="2020-10-13T19:12:42 IST" name="SC_ScreenerAuthentication" data-provider="RC_test_data_provider" finished-at="2020-10-13T19:12:42 IST" duration-ms="122" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[com.Agility.ComplianceSC_RequestPOJO.AuthenticateData@72b0a004]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SC_ScreenerAuthentication -->
-        <test-method signature="SaveSecB()[pri:7, instance:com.Agility.ComplianceSC_Tests.SanctionedCountryTestCases@7c51f34b]" started-at="2020-10-13T19:12:42 IST" name="SaveSecB" finished-at="2020-10-13T19:12:43 IST" duration-ms="303" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SaveSecB -->
-        <test-method signature="CompleteSecB()[pri:8, instance:com.Agility.ComplianceSC_Tests.SanctionedCountryTestCases@7c51f34b]" started-at="2020-10-13T19:12:43 IST" name="CompleteSecB" finished-at="2020-10-13T19:12:43 IST" duration-ms="264" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CompleteSecB -->
-        <test-method signature="ApproveRequest()[pri:9, instance:com.Agility.ComplianceSC_Tests.SanctionedCountryTestCases@7c51f34b]" started-at="2020-10-13T19:12:43 IST" name="ApproveRequest" finished-at="2020-10-13T19:12:43 IST" duration-ms="116" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ApproveRequest -->
-      </class> <!-- com.Agility.ComplianceSC_Tests.SanctionedCountryTestCases -->
+        </test-method> <!-- LCL_RateSearch -->
+      </class> <!-- com.Agility.RCTests.RCAPITests2 -->
     </test> <!-- Test -->
   </suite> <!-- RC_API_Suite -->
 </testng-results>

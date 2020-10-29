@@ -39,7 +39,7 @@ public class SanctionedCountryTestCases {
 
 	@Test(priority = 1, enabled = true, dataProvider = "RC_test_data_provider", dataProviderClass = DataProviderClass.class)
 	public void SC_CoordinatorAuthentication(AuthenticateData data) {
-
+		data.setTestCategory(null);
 		Response response = BusinessLogic.AuthenticateAPI(data);
 
 		AauthenticateResponsePOJO resp = response.as(AauthenticateResponsePOJO.class);
@@ -108,6 +108,7 @@ public class SanctionedCountryTestCases {
 		
 		ResponseValidation.logMessage("<b>Questionnaire Sec A Status is </b>"+SavedSecA.getData().getSanCountryReqQuestionnaireSecA().getStatusStatusDesc());
 		
+		//<pre id="json"></pre>
 		
 		ResponseValidation.logResponse(response);
 		
@@ -234,6 +235,7 @@ public class SanctionedCountryTestCases {
 		SecBdata.setRequestedDate(SecACompleted.getData().getRequestedDate());
 
 		SecBdata.setRequestedBy(SecACompleted.getData().getRequestedBy());
+		
 
 		SecBdata.setStatusId(2);
 		SecBdata.setComments(SecACompleted.getData().getComments());
