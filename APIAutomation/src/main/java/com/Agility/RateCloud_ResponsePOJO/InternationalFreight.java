@@ -32,7 +32,7 @@ public class InternationalFreight {
 	@JsonProperty("transitTime")
 	private Object transitTime;
 	@JsonProperty("charge")
-	private List<Object> charge = null;
+	private List<Charge> charge = null;
 	@JsonIgnore
 	private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
@@ -137,12 +137,12 @@ public class InternationalFreight {
 	}
 
 	@JsonProperty("charge")
-	public List<Object> getCharge() {
+	public List<Charge> getCharge() {
 	return charge;
 	}
 
 	@JsonProperty("charge")
-	public void setCharge(List<Object> charge) {
+	public void setCharge(List<Charge> charge) {
 	this.charge = charge;
 	}
 

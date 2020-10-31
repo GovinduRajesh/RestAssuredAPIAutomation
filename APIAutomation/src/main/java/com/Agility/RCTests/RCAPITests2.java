@@ -126,11 +126,11 @@ public class RCAPITests2 {
 
 				List<Charge> charges = a.getCharge();
 				for (Charge charge : charges) {
-					charge.setCurrencyIsoCode(null);
+					//charge.setCurrencyIsoCode(null);
 					if (charge.getCurrencyIsoCode() == null || StringUtils.isEmpty(charge.getCurrencyIsoCode())) {
 						Currencycount = Currencycount + 1;
 					}
-					charge.setUomCode("");
+					//charge.setUomCode("");
 					if (charge.getUomCode() == null || (charge.getUomCode() == "")) {
 
 						UomCount = UomCount + 1;
